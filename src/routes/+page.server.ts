@@ -6,7 +6,7 @@ type Data = {
 	projects: Project[]
 }
 export const load: PageServerLoad<Data> = async () => {
-	const projects = await listProjects()
+	// const projects = await listProjects()
 
-	return { projects }
+	return { projects: [] }
 }

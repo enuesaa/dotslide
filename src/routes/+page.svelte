@@ -5,10 +5,6 @@
 	export let data: PageData
 </script>
 
-<svelte:head>
-	<title>雑コード置き場 | lab.enuesaa.dev</title>
-</svelte:head>
-
 {#each data.projects as project}
 	<ProjectLink href={`/prototype/${project.name}`} title={project.title} />
 {/each}
