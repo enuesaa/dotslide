@@ -8,9 +8,9 @@ package internal
 
 // Injectors from wire.go:
 
-func New() App {
-	handler := NewRouter()
-	server := NewServer(handler)
-	app := NewApp(server)
+func New(config Config) App {
+	router := NewRouter(config)
+	server := NewServer(router)
+	app := NewApp(config, server)
 	return app
 }

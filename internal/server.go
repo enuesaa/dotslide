@@ -6,24 +6,24 @@ import (
 	"net/http"
 )
 
-func NewServer(handler http.Handler) Server {
+func NewServer(router Router) Server {
 	return Server{
 		Port: 3000,
-		handler: handler,
+		router: router,
 	}
 }
 
 type Server struct {
 	Port int
 
-	handler http.Handler
+	router Router
 	server *http.Server
 }
 
 func (s *Server) Serve() error {
 	s.server = &http.Server{
 		Addr: fmt.Sprintf(":%d", s.Port),
-		Handler: s.handler,
+		Handler: s.router.Handle(),
 	}
 	fmt.Println("server started")
 

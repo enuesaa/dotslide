@@ -1,15 +1,18 @@
-package routes
+package internal
 
 import (
 	"os"
+	"path/filepath"
 
 	"github.com/enuesaa/dotslide/internal/slides"
 	"github.com/labstack/echo/v4"
 	"gopkg.in/yaml.v3"
 )
 
-func HandleApiSlide(c echo.Context) error {
-	data, err := os.ReadFile("testdata/.slide.yml")
+func (r *Router) handleApiSlide(c echo.Context) error {
+	path := filepath.Join(r.config.Workdir, ".slide.yml")
+
+	data, err := os.ReadFile(path)
 	if err != nil {
 		return err
 	}

@@ -8,8 +8,8 @@
 node_modules
 
 # sveltekit
-internal/routes/dist/*
-!internal/routes/dist/.gitkeep
+internal/ui/dist/*
+!internal/ui/dist/.gitkeep
 .svelte-kit
 
 # slide

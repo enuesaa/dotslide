@@ -6,7 +6,7 @@
 </script>
 
 <QueryClientProvider client={queryClient}>
-	<main class="min-h-screen container mx-auto px-1 py-8">
+	<main class="min-h-screen container mx-auto pb-8">
 		<slot />
 	</main>
 </QueryClientProvider>

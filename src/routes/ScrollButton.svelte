@@ -1,22 +1,19 @@
 <script lang="ts">
-	import { onMount } from 'svelte'
+	import { ArrowDown } from 'lucide-svelte'
 
 	let currentIndex = 0
-	let screenHeight = 0
-
-	onMount(() => {
-		screenHeight = window.innerHeight
-	})
 
 	function handleClick() {
 		currentIndex++;
+		const windowH = window.innerHeight
+	
 		window.scrollTo({
-			top: screenHeight * currentIndex,
+			top: windowH * currentIndex + 20,
 			behavior: 'smooth'
 		})
 	}
 </script>
 
 <button on:click|preventDefault={handleClick} class="fixed bottom-3 right-3">
-	scroll
+	<ArrowDown />
 </button>

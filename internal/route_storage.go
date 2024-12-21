@@ -1,7 +1,6 @@
-package routes
+package internal
 
 import (
-	"fmt"
 	"mime"
 	"os"
 	"path/filepath"
@@ -10,14 +9,13 @@ import (
 	"github.com/labstack/echo/v4"
 )
 
-func HandleStorage(c echo.Context) error  {
+func (r *Router) handleStorage(c echo.Context) error  {
 	path := c.Request().URL.Path // like `/`
 	path = strings.TrimPrefix(path, "/storage/")
-
+	path = filepath.Join(r.config.Workdir, path)
 
 	fileExt := filepath.Ext(path)
-	fmt.Println("testdata/" + path)
-	f, err := os.ReadFile("testdata/" + path)
+	f, err := os.ReadFile(path)
 	if err != nil {
 		return err
 	}

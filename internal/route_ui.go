@@ -1,19 +1,16 @@
-package routes
+package internal
 
 import (
 	"fmt"
 	"mime"
 	"path/filepath"
 	"strings"
-	"embed"
 
+	"github.com/enuesaa/dotslide/internal/ui"
 	"github.com/labstack/echo/v4"
 )
 
-//go:embed all:dist/*
-var dist embed.FS
-
-func HandleUi(c echo.Context) error {
+func (r *Router) handleUi(c echo.Context) error {
 	path := c.Request().URL.Path // like `/`
 	path = fmt.Sprintf("dist%s", path)
 
@@ -22,7 +19,7 @@ func HandleUi(c echo.Context) error {
 		path = "dist/index.html"
 	}
 
-	f, err := dist.ReadFile(path)
+	f, err := ui.Dist.ReadFile(path)
 	if err != nil {
 		return err
 	}

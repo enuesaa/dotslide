@@ -3,21 +3,23 @@ package main
 import (
 	"log"
 
-	flag "github.com/spf13/pflag"
 	"github.com/enuesaa/dotslide/internal"
+	flag "github.com/spf13/pflag"
 )
 
 var (
-	port = *flag.IntP("port", "p", 3000, "Port")
-	workdir = *flag.StringP("workdir", "w", ".", "Workdir")
+	port = flag.IntP("port", "p", 3000, "Port")
+	workdir = flag.StringP("workdir", "w", ".", "Workdir")
 )
 
 func main() {
 	flag.Parse()
 
-	app := internal.New()
-	app.Port = port
-	app.Workdir = workdir
+	config := internal.Config{
+		Port: *port,
+		Workdir: *workdir,
+	}
+	app := internal.New(config)
 
 	if err := app.Run(); err != nil {
 		log.Panicf("Error: %s", err.Error())

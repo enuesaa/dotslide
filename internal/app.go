@@ -1,20 +1,19 @@
 package internal
 
-func NewApp(server Server) App {
+func NewApp(config Config, server Server) App {
 	return App{
+		config: config,
 		server: server,
 	}
 }
 
 type App struct {
-	Port int
-	Workdir string
-	
+	config Config
 	server Server
 }
 
 func (a *App) Run() error {
-	a.server.Port = a.Port
+	a.server.Port = a.config.Port
 
 	defer a.server.Close()
 	if err := a.server.Serve(); err != nil {
