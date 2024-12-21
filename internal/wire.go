@@ -6,7 +6,7 @@ package internal
 import "github.com/google/wire"
 
 func New() App {
-	wire.Build(NewApp)
+	wire.Build(NewApp, NewServer, NewRouter)
 
 	return App{}
 }

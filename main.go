@@ -8,16 +8,18 @@ import (
 )
 
 var (
-	port = flag.IntP("port", "p", 3000, "Port")
-	workdir = flag.StringP("workdir", "w", ".", "Workdir")
+	port = *flag.IntP("port", "p", 3000, "Port")
+	workdir = *flag.StringP("workdir", "w", ".", "Workdir")
 )
 
 func main() {
 	flag.Parse()
 
-	app := internal.NewReouter()
+	app := internal.New()
+	app.Port = port
+	app.Workdir = workdir
 
-	if err := app.Start(":3000"); err != nil {
+	if err := app.Run(); err != nil {
 		log.Panicf("Error: %s", err.Error())
 	}
 }

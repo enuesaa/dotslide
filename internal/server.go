@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-func NewServer(handler *http.ServeMux) Server {
+func NewServer(handler http.Handler) Server {
 	return Server{
 		Port: 3000,
 		handler: handler,
@@ -16,7 +16,7 @@ func NewServer(handler *http.ServeMux) Server {
 type Server struct {
 	Port int
 
-	handler *http.ServeMux
+	handler http.Handler
 	server *http.Server
 }
 
