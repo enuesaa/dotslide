@@ -6,9 +6,9 @@
 
 </script>
 
-{#if unit.titleStyle == 'emphasis'}
+{#if unit.cap !== undefined}
 	<div class="font-semibold mt-10 mb-3 font-zenmaru text-4xl text-left pl-2 block w-full">
-		# {unit.title}
+		# {unit.cap}
 	</div>
 {:else}
 	<div class="font-semibold text-2xl mt-7 mb-3 pl-2 font-zenmaru flex gap-[3px] text-left">

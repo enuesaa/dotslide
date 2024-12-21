@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { TreeData } from '$lib/prototype/tree'
+	import type { TreeData } from '$lib/tree'
 	import UnitSepDownloader from './UnitSepDownloader.svelte'
 
 	export let text: string

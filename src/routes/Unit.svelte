@@ -1,30 +1,27 @@
 <script lang="ts">
 	import UnitNav from './UnitNav.svelte'
 	import UnitBody from './UnitBody.svelte'
-	import type { Project, Unit } from '$lib/types'
-	import type { TreeData } from '$lib/tree'
+	import type { Unit } from '$lib/types'
 
-	export let project: Project
 	export let unit: Unit
-	export let files: TreeData[]
 </script>
 
 <div class="h-screen">
 	{#if unit.title != undefined}
 		<UnitNav {unit} />
 	{/if}
-	<UnitBody {project} {unit} {files} />
+	<UnitBody {unit} />
 
 	{#if unit.left != undefined || unit.right != undefined}
 		<section class="flex gap-10">
 			<div class="w-1/2">
 				{#if unit.left != undefined}
-					<svelte:self {project} unit={unit.left} {files} />
+					<svelte:self unit={unit.left} />
 				{/if}
 			</div>
 			<div class="w-1/2">
 				{#if unit.right != undefined}
-					<svelte:self {project} unit={unit.right} {files} />
+					<svelte:self unit={unit.right} />
 				{/if}
 			</div>
 		</section>

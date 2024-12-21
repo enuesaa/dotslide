@@ -14,7 +14,7 @@ func NewRouter() http.Handler {
 	app.Use(middleware.Logger)
 	app.Use(middleware.Cors)
 
-	app.GET("/api/slide", routes.HandleApiSlide)
+	app.GET("/api/dotslide", routes.HandleApiSlide)
 	app.GET("/storage/*", routes.HandleStorage)
 	app.GET("/*", routes.HandleUi)
 

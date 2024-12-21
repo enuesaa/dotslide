@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { Project, Unit } from '$lib/types'
+	import type { Unit } from '$lib/types'
 	import { createTreeViewCtl, createViewing, type TreeData } from '$lib/tree'
 	import CodeViewer from './CodeViewer.svelte'
 	import UnitDescription from './UnitDescription.svelte'
@@ -11,9 +11,7 @@
 	createTreeViewCtl()
 	createViewing()
 
-	export let project: Project
 	export let unit: Unit
-	export let files: TreeData[]
 </script>
 
 <section>
@@ -21,15 +19,15 @@
 		<UnitDescription description={unit.description} />
 	{/if}
 
-	{#if unit.links !== undefined}
+	<!-- {#if unit.links !== undefined}
 		<UnitLinks links={unit.links} />
-	{/if}
+	{/if} -->
 
 	{#if unit.image !== undefined}
-		<UnitImage {project} image={unit.image} />
+		<UnitImage image={unit.image} />
 	{/if}
 
-	<div class="rounded-lg overflow-hidden mt-1">
+	<!-- <div class="rounded-lg overflow-hidden mt-1">
 		{#if unit.open !== undefined}
 			<UnitSep text="</>" treeData={files} enableDownloader />
 			<CodeViewer treeData={files} firstOpen={unit.open} />
@@ -39,7 +37,7 @@
 			<UnitSep text="ターミナル" />
 			<UnitTerminal content={unit.console} />
 		{/if}
-	</div>
+	</div> -->
 </section>
 
 <style lang="postcss">

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { TreeData } from '$lib/prototype/tree'
+	import type { TreeData } from '$lib/tree'
 	import JSZip from 'jszip'
 	import { Download } from 'lucide-svelte'
 
