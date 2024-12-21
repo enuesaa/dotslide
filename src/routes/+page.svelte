@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Unit from './Unit.svelte'
+	import ScrollButton from './ScrollButton.svelte'
 
 	import { fetchSlides } from '$lib/api'
 	import { createQuery } from '@tanstack/svelte-query'
@@ -15,3 +16,5 @@
 		<Unit {unit} />
 	{/each}
 {/if}
+
+<ScrollButton />
