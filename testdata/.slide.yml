@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/enuesaa/dotslide/refs/heads/main/.slide.schema.json
+
+slides:
+  - titleBig: テストデータ
+
+  - title: slide title
+    description: desc
+    image: architecture.png
+    left:
+      title: left
+      description: |
+        left desc
+    right:
+      title: right
+      description: |
+        right desc
+      image: architecture.png
