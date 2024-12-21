@@ -7,6 +7,8 @@
 	import UnitImage from './UnitImage.svelte'
 	import UnitTerminal from './UnitTerminal.svelte'
 	import UnitSep from './UnitSep.svelte'
+	import UnitTitle from './UnitTitle.svelte'
+	import UnitCap from './UnitCap.svelte'
 
 	createTreeViewCtl()
 	createViewing()
@@ -15,7 +17,13 @@
 </script>
 
 <section>
-	{#if unit.description !== undefined}
+	{#if unit?.cap !== undefined}
+		<UnitCap {unit} />
+	{/if}
+	{#if unit?.title !== undefined}
+		<UnitTitle {unit} />
+	{/if}
+	{#if unit?.description !== undefined}
 		<UnitDescription description={unit.description} />
 	{/if}
 
@@ -23,7 +31,7 @@
 		<UnitLinks links={unit.links} />
 	{/if} -->
 
-	{#if unit.image !== undefined}
+	{#if unit?.image !== undefined}
 		<UnitImage image={unit.image} />
 	{/if}
 

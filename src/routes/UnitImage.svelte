@@ -1,8 +1,10 @@
 <script lang="ts">
+	import { PUBLIC_API_ENDPOINT_BASE } from '$env/static/public'
+
 	export let image: string
 </script>
 
-<!-- <img src={`/prototype/${project.name}/${image}`} alt={image} /> -->
+<img src={`${PUBLIC_API_ENDPOINT_BASE}/storage/${image}`} alt={image} />
 
 <style lang="postcss">
 	img {

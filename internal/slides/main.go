@@ -18,6 +18,7 @@ type Slide struct {
 }
 
 type Unit struct {
+	Cap         string `json:"cap"`
 	Title       string `json:"title"`
 	Description string `json:"description"`
 	Image       string `json:"image"`
