@@ -19,6 +19,21 @@
           "description": {
             "type": "string"
           },
+          "links": {
+            "required": [
+              "title", "url"
+            ],
+            "additionalProperties": false,
+            "type": "object",
+            "properties": {
+              "title": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              }
+            }
+          },
           "image": {
             "type": "string"
           },
@@ -57,6 +72,19 @@
         },
         "description": {
           "type": "string"
+        },
+        "links": {
+          "required": [],
+          "additionalProperties": false,
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            }
+          }
         },
         "image": {
           "type": "string"

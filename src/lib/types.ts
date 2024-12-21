@@ -2,6 +2,10 @@ export type Unit = {
   cap?: string
 	title?: string
 	description?: string
+	links?: {
+		title: string
+		url: string
+	}[]
 	image?: string
 	console?: string
 	left?: Unit

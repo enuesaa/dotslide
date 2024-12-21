@@ -15,3 +15,7 @@ slides:
       description: |
         right desc
       image: architecture.svg
+      links:
+        - title: ドキュメント
+          url: https://example.com/
+

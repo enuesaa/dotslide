@@ -21,5 +21,11 @@ type Unit struct {
 	Cap         string `json:"cap,omitempty"`
 	Title       string `json:"title,omitempty"`
 	Description string `json:"description,omitempty"`
+	Links       []UnitLink `json:"links,omitempty"`
 	Image       string `json:"image,omitempty"`
+}
+
+type UnitLink struct {
+	Title string `json:"title,omitempty"`
+	Url   string `json:"url,omitempty"`
 }
