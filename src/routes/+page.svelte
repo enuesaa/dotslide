@@ -1,10 +1,27 @@
 <script lang="ts">
-	import ProjectLink from './ProjectLink.svelte'
-	import type { PageData } from './$types'
+	import PageTitle from './PageTitle.svelte'
+	import Description from './Description.svelte'
+	import PagePublishedBar from './PagePublishedBar.svelte'
+	import Unit from './Unit.svelte'
 
-	export let data: PageData
+	import { fetchNotes } from '$lib/api'
+	import { createQuery } from '@tanstack/svelte-query'
+
+	const data = createQuery({
+		queryKey: ['notes'],
+		queryFn: fetchNotes,
+	})
 </script>
 
-{#each data.projects as project}
-	<ProjectLink href={`/prototype/${project.name}`} title={project.title} />
+<svelte:head>
+	<title>{data.project.title}</title>
+	<meta name="description" content={`${data.project.title} | lab.enuesaa.dev`} />
+</svelte:head>
+
+<PageTitle title={data.project.title} />
+<PagePublishedBar published={data.project.published} />
+<Description content={data.project.description} />
+
+{#each data.project.units as unit}
+	<Unit project={data.project} {unit} files={data.unitfiles[unit.title]} />
 {/each}

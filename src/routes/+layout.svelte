@@ -1,15 +1,20 @@
 <script lang="ts">
 	import './app.css'
 	import Header from './Header.svelte'
+
+	import { QueryClient, QueryClientProvider } from '@tanstack/svelte-query'
+
+	const queryClient = new QueryClient()
 </script>
 
-<Header />
-
-<main>
-	<div class="container mx-auto px-1 py-8">
-		<slot />
-	</div>
-</main>
+<QueryClientProvider client={queryClient}>
+	<Header />
+	<main>
+		<div class="container mx-auto px-1 py-8">
+			<slot />
+		</div>
+	</main>
+</QueryClientProvider>
 
 <style lang="postcss">
 	main {
