@@ -13,16 +13,11 @@ func HandleApiSlide(c echo.Context) error {
 	if err != nil {
 		return err
 	}
-
-	type Response struct {
-		Slides []slides.Slide `yaml:"slides" json:"slides"`
-	}
 	
-	var response Response
-	err = yaml.Unmarshal(data, &response)
-	if err != nil {
+	var dotslide slides.DotSlide
+	if err := yaml.Unmarshal(data, &dotslide); err != nil {
 		return err
 	}
 
-	return c.JSON(200, response)
+	return c.JSON(200, dotslide)
 }

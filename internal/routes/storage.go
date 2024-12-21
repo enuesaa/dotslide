@@ -1,6 +1,7 @@
 package routes
 
 import (
+	"fmt"
 	"mime"
 	"os"
 	"path/filepath"
@@ -13,8 +14,10 @@ func HandleStorage(c echo.Context) error  {
 	path := c.Request().URL.Path // like `/`
 	path = strings.TrimPrefix(path, "/storage/")
 
+
 	fileExt := filepath.Ext(path)
-	f, err := os.ReadFile(path)
+	fmt.Println("testdata/" + path)
+	f, err := os.ReadFile("testdata/" + path)
 	if err != nil {
 		return err
 	}

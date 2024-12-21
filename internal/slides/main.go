@@ -5,21 +5,21 @@ type DotSlide struct {
 }
 
 type Slide struct {
-	Cap         string `json:"cap"`
-	Title       string `json:"title"`
-	Description string `json:"description"`
-	Image       string `json:"image"`
-	Left        *Unit  `json:"left"`
-	Center      *Unit  `json:"center"`
-	Right       *Unit  `json:"right"`
-	MetaLeft    *Unit  `json:"metaLeft"`
-	MetaCenter  *Unit  `json:"metaCenter"`
-	MetaRight   *Unit  `json:"metaRight"`
+	Cap         string `json:"cap,omitempty"`
+	Title       string `json:"title,omitempty"`
+	Description string `json:"description,omitempty"`
+	Image       string `json:"image,omitempty"`
+	Left        *Unit  `json:"left,omitempty"`
+	Center      *Unit  `json:"center,omitempty"`
+	Right       *Unit  `json:"right,omitempty"`
+	MetaLeft    *Unit  `json:"metaLeft,omitempty"`
+	MetaCenter  *Unit  `json:"metaCenter,omitempty"`
+	MetaRight   *Unit  `json:"metaRight,omitempty"`
 }
 
 type Unit struct {
-	Cap         string `json:"cap"`
-	Title       string `json:"title"`
-	Description string `json:"description"`
-	Image       string `json:"image"`
+	Cap         string `json:"cap,omitempty"`
+	Title       string `json:"title,omitempty"`
+	Description string `json:"description,omitempty"`
+	Image       string `json:"image,omitempty"`
 }

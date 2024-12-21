@@ -5,7 +5,7 @@ slides:
 
   - title: slide title
     description: desc
-    image: architecture.png
+    image: architecture.svg
     left:
       title: left
       description: |
@@ -14,4 +14,4 @@ slides:
       title: right
       description: |
         right desc
-      image: architecture.png
+      image: architecture.svg
