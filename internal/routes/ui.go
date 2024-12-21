@@ -6,7 +6,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/enuesaa/dotslide/web/ui"
+	"github.com/enuesaa/dotslide/internal/ui"
 	"github.com/labstack/echo/v4"
 )
 

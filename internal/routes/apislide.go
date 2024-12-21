@@ -3,7 +3,7 @@ package routes
 import (
 	"os"
 
-	"github.com/enuesaa/dotslide/web/slides"
+	"github.com/enuesaa/dotslide/internal/slides"
 	"github.com/labstack/echo/v4"
 	"gopkg.in/yaml.v3"
 )

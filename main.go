@@ -4,7 +4,7 @@ import (
 	"log"
 
 	flag "github.com/spf13/pflag"
-	"github.com/enuesaa/dotslide/web"
+	"github.com/enuesaa/dotslide/internal"
 )
 
 var (
@@ -15,7 +15,7 @@ var (
 func main() {
 	flag.Parse()
 
-	app := web.NewReouter()
+	app := internal.NewReouter()
 
 	if err := app.Start(":3000"); err != nil {
 		log.Panicf("Error: %s", err.Error())
