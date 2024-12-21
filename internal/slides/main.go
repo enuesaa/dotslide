@@ -1,15 +1,24 @@
 package slides
 
-type Slide struct {
-	Title       string       `yaml:"title" json:"title"`
-	TitleStyle  string       `yaml:"titleStyle,omitempty" json:"titleStyle,omitempty"`
-	Description string       `yaml:"description,omitempty" json:"description,omitempty"`
-	Image       string       `yaml:"image,omitempty" json:"image,omitempty"`
-	Left        *SlideDetail `yaml:"left,omitempty" json:"left,omitempty"`
-	Right       *SlideDetail `yaml:"right,omitempty" json:"right,omitempty"`
+type DotSlide struct {
+	Slides []Slide `json:"slides"`
 }
 
-type SlideDetail struct {
-	Title       string `yaml:"title" json:"title"`
-	Description string `yaml:"description" json:"description"`
+type Slide struct {
+	Cap         string `json:"cap"`
+	Title       string `json:"title"`
+	Description string `json:"description"`
+	Image       string `json:"image"`
+	Left        *Unit  `json:"left"`
+	Center      *Unit  `json:"center"`
+	Right       *Unit  `json:"right"`
+	MetaLeft    *Unit  `json:"metaLeft"`
+	MetaCenter  *Unit  `json:"metaCenter"`
+	MetaRight   *Unit  `json:"metaRight"`
+}
+
+type Unit struct {
+	Title       string `json:"title"`
+	Description string `json:"description"`
+	Image       string `json:"image"`
 }

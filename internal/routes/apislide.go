@@ -9,7 +9,7 @@ import (
 )
 
 func HandleApiSlide(c echo.Context) error {
-	data, err := os.ReadFile("slides.yml")
+	data, err := os.ReadFile("testdata/.slide.yml")
 	if err != nil {
 		return err
 	}

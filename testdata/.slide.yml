@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/enuesaa/dotslide/refs/heads/main/.slide.schema.json
 
 slides:
-  - titleBig: テストデータ
+  - cap: テストデータ
 
   - title: slide title
     description: desc

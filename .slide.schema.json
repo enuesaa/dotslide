@@ -8,13 +8,12 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": [],
         "additionalProperties": false,
         "properties": {
-          "title": {
+          "cap": {
             "type": "string"
           },
-          "titleStyle": {
+          "title": {
             "type": "string"
           },
           "description": {
@@ -24,31 +23,40 @@
             "type": "string"
           },
           "left": {
-            "type": "object",
-            "required": [],
-            "additionalProperties": false,
-            "properties": {
-              "title": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              }
-            }
+            "$ref": "#/definitions/unit"
+          },
+          "center": {
+            "$ref": "#/definitions/unit"
           },
           "right": {
-            "type": "object",
-            "required": [],
-            "additionalProperties": false,
-            "properties": {
-              "title": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              }
-            }
+            "$ref": "#/definitions/unit"
+          },
+          "metaLeft": {
+            "$ref": "#/definitions/unit" 
+          },
+          "metaCenter": {
+            "$ref": "#/definitions/unit"
+          },
+          "metaRight": {
+            "$ref": "#/definitions/unit"
           }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "unit": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "image": {
+          "type": "string"
         }
       }
     }
