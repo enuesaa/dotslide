@@ -1,6 +1,6 @@
 <script lang="ts">
-	import type { Project, Unit } from '$lib/prototype/types'
-	import { createTreeViewCtl, createViewing, type TreeData } from '$lib/prototype/tree'
+	import type { Project, Unit } from '$lib/types'
+	import { createTreeViewCtl, createViewing, type TreeData } from '$lib/tree'
 	import CodeViewer from './CodeViewer.svelte'
 	import UnitDescription from './UnitDescription.svelte'
 	import UnitLinks from './UnitLinks.svelte'

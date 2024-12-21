@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { Unit } from '$lib/prototype/types'
+	import type { Unit } from '$lib/types'
 	import { SquareChevronDown } from 'lucide-svelte'
 
 	export let unit: Unit

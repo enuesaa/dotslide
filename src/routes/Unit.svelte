@@ -1,8 +1,8 @@
 <script lang="ts">
 	import UnitNav from './UnitNav.svelte'
 	import UnitBody from './UnitBody.svelte'
-	import type { Project, Unit } from '$lib/prototype/types'
-	import type { TreeData } from '$lib/prototype/tree'
+	import type { Project, Unit } from '$lib/types'
+	import type { TreeData } from '$lib/tree'
 
 	export let project: Project
 	export let unit: Unit

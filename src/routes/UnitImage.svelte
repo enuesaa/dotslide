@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { Project } from '$lib/prototype/types'
+	import type { Project } from '$lib/types'
 
 	export let project: Project
 	export let image: string

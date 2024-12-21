@@ -4,14 +4,20 @@
 	import PagePublishedBar from './PagePublishedBar.svelte'
 	import Unit from './Unit.svelte'
 
-	import { fetchNotes } from '$lib/api'
+	import { fetchSlides } from '$lib/api'
 	import { createQuery } from '@tanstack/svelte-query'
 
-	const data = createQuery({
-		queryKey: ['notes'],
-		queryFn: fetchNotes,
+	const slides = createQuery({
+		queryKey: ['slides'],
+		queryFn: fetchSlides,
 	})
 </script>
+
+{#if $slides.isSuccess}
+	{#each $slides.data as slide}
+		<p>タイトル: {slide.cap}</p>
+	{/each}
+{/if}
 
 <!-- <svelte:head>
 	<title>{data.project.title}</title>

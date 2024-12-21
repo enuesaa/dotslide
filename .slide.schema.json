@@ -49,6 +49,9 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "cap": {
+          "type": "string"
+        },
         "title": {
           "type": "string"
         },

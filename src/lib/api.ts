@@ -1,13 +1,16 @@
-type Note = {
-  name: string
-  content: string
-}
-export const fetchNotes = async (): Promise<Note[]> => {
-  const list = [
-    {
-      name: 'タイトル',
-      content: '内容',
+import { type Unit } from './types'
+
+export const fetchSlides = async (): Promise<Unit[]> => {
+  const res = await fetch(`http://localhost:3000/api/slide`, {
+    headers: {
+      Accept: 'application/json',
     },
-  ]
-  return list
+  })
+
+  const resbody: {slides: Unit[]} = await res.json()
+  const slides = resbody.slides
+
+  console.log(slides)
+
+  return slides
 }
