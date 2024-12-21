@@ -1,40 +1,56 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
+  "additionalProperties": false,
+  "required": ["slides"],
   "properties": {
     "slides": {
       "type": "array",
       "items": {
         "type": "object",
+        "required": [],
+        "additionalProperties": false,
         "properties": {
-          "title": { "type": "string" },
-          "titleStyle": { "type": "string" },
-          "description": { "type": "string" },
-          "image": { "type": "string", "format": "uri-reference" },
+          "title": {
+            "type": "string"
+          },
+          "titleStyle": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "image": {
+            "type": "string"
+          },
           "left": {
             "type": "object",
+            "required": [],
+            "additionalProperties": false,
             "properties": {
-              "title": { "type": "string" },
-              "description": { "type": "string" }
-            },
-            "required": ["title", "description"],
-            "additionalProperties": false
+              "title": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              }
+            }
           },
           "right": {
             "type": "object",
+            "required": [],
+            "additionalProperties": false,
             "properties": {
-              "title": { "type": "string" },
-              "description": { "type": "string" }
-            },
-            "required": ["title", "description"],
-            "additionalProperties": false
+              "title": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              }
+            }
           }
-        },
-        "required": ["title"],
-        "additionalProperties": false
+        }
       }
     }
-  },
-  "required": ["slides"],
-  "additionalProperties": false
+  }
 }

@@ -5,10 +5,13 @@ import (
 	"mime"
 	"path/filepath"
 	"strings"
+	"embed"
 
-	"github.com/enuesaa/dotslide/internal/ui"
 	"github.com/labstack/echo/v4"
 )
+
+//go:embed all:dist/*
+var dist embed.FS
 
 func HandleUi(c echo.Context) error {
 	path := c.Request().URL.Path // like `/`
@@ -19,7 +22,7 @@ func HandleUi(c echo.Context) error {
 		path = "dist/index.html"
 	}
 
-	f, err := ui.Dist.ReadFile(path)
+	f, err := dist.ReadFile(path)
 	if err != nil {
 		return err
 	}

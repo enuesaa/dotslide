@@ -7,7 +7,7 @@ export default {
 	preprocess: sequence([vitePreprocess(), preprocessMeltUI()]),
 	kit: {
 		adapter: adapter({
-			pages: 'web/ui/dist',
+			pages: 'internal/routes/dist',
 			fallback: '404.html',
 		}),
 	},

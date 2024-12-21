@@ -13,7 +13,7 @@
 	})
 </script>
 
-<svelte:head>
+<!-- <svelte:head>
 	<title>{data.project.title}</title>
 	<meta name="description" content={`${data.project.title} | lab.enuesaa.dev`} />
 </svelte:head>
@@ -24,4 +24,4 @@
 
 {#each data.project.units as unit}
 	<Unit project={data.project} {unit} files={data.unitfiles[unit.title]} />
-{/each}
+{/each} -->

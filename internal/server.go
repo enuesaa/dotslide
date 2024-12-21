@@ -25,6 +25,7 @@ func (s *Server) Serve() error {
 		Addr: fmt.Sprintf(":%d", s.Port),
 		Handler: s.handler,
 	}
+	fmt.Println("server started")
 
 	return s.server.ListenAndServe()
 }
