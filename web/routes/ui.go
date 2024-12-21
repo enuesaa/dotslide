@@ -6,6 +6,7 @@ import (
 	"path/filepath"
 	"strings"
 
+	"github.com/enuesaa/dotslide/web/ui"
 	"github.com/labstack/echo/v4"
 )
 
@@ -18,7 +19,7 @@ func HandleUi(c echo.Context) error {
 		path = "dist/index.html"
 	}
 
-	f, err := dist.ReadFile(path)
+	f, err := ui.Dist.ReadFile(path)
 	if err != nil {
 		return err
 	}

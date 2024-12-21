@@ -1,9 +1,4 @@
-package main
-
-type SlideDetail struct {
-	Title       string `yaml:"title" json:"title"`
-	Description string `yaml:"description" json:"description"`
-}
+package slides
 
 type Slide struct {
 	Title       string       `yaml:"title" json:"title"`
@@ -12,4 +7,9 @@ type Slide struct {
 	Image       string       `yaml:"image,omitempty" json:"image,omitempty"`
 	Left        *SlideDetail `yaml:"left,omitempty" json:"left,omitempty"`
 	Right       *SlideDetail `yaml:"right,omitempty" json:"right,omitempty"`
+}
+
+type SlideDetail struct {
+	Title       string `yaml:"title" json:"title"`
+	Description string `yaml:"description" json:"description"`
 }

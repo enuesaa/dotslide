@@ -8,7 +8,8 @@
 node_modules
 
 # sveltekit
-dist
+web/ui/dist/*
+!web/ui/dist/.gitkeep
 .svelte-kit
 
 # slide

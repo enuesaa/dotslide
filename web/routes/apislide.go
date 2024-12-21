@@ -3,6 +3,7 @@ package routes
 import (
 	"os"
 
+	"github.com/enuesaa/dotslide/web/slides"
 	"github.com/labstack/echo/v4"
 	"gopkg.in/yaml.v3"
 )
@@ -14,7 +15,7 @@ func HandleApiSlide(c echo.Context) error {
 	}
 
 	type Response struct {
-		Slides []Slide `yaml:"slides" json:"slides"`
+		Slides []slides.Slide `yaml:"slides" json:"slides"`
 	}
 	
 	var response Response
