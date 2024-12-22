@@ -5,8 +5,15 @@
 	import UnitImage from './UnitImage.svelte'
 	import UnitTitle from './UnitTitle.svelte'
 	import UnitCap from './UnitCap.svelte'
+	import CodeViewer from './CodeViewer.svelte'
+	import { createTreeViewCtl, createViewing } from '$lib/tree'
+	import UnitSep from './UnitSep.svelte'
+	import UnitFiles from './UnitFiles.svelte'
 
 	export let unit: Unit
+
+	createTreeViewCtl()
+	createViewing()
 </script>
 
 <section>
@@ -26,6 +33,10 @@
 
 	{#if unit?.image !== undefined}
 		<UnitImage image={unit.image} />
+	{/if}
+
+	{#if unit?.files !== undefined && unit.files.length > 0}
+		<UnitFiles files={unit.files} />
 	{/if}
 
 	<!-- 

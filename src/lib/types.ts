@@ -6,6 +6,7 @@ export type Unit = {
 		title: string
 		url: string
 	}[]
+	files?: UnitFile[]
 	image?: string
 	console?: string
 	left?: Unit
@@ -14,4 +15,9 @@ export type Unit = {
 	metaLeft?: Unit
   metaCenter?: Unit
   metaRight?: Unit
+}
+
+export type UnitFile = {
+	filename: string
+	code: string
 }

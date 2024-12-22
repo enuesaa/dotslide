@@ -20,3 +20,10 @@ slides:
           url: https://example.com/
 
   - cap: つづき
+    files:
+      - filename: main.go
+        code: |
+          package main
+
+          func main() {
+          }

@@ -1,0 +1,37 @@
+<script lang="ts">
+	import { melt } from '@melt-ui/svelte'
+	import { getTreeViewCtl, getViewing } from '$lib/tree'
+	import { type UnitFile } from '$lib/types'
+
+	export let data: UnitFile
+	// const hasChildren = data.children.length > 0
+
+	const { item } = getTreeViewCtl()
+	const viewing = getViewing()
+
+	function hanldeClick() {
+		// if (hasChildren) {
+		// 	return
+		// }
+		viewing.set(data)
+	}
+</script>
+
+<button
+	use:melt={$item({
+		id: data.filename,
+		// hasChildren,
+	})}
+	on:click|preventDefault={hanldeClick}
+	disabled={false}
+	class={$viewing?.filename === data.filename ? 'bg-editorsep/50 border-editortext/50 border-[0.5px]' : ''}
+>
+	{data.filename}
+</button>
+
+<style lang="postcss">
+	button {
+		@apply inline-block py-[1px] mt-[1px] px-1 text-left;
+		@apply rounded-sm select-none;
+	}
+</style>

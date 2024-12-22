@@ -34,6 +34,22 @@
               }
             }
           },
+          "files": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["filename", "code"],
+              "additionalProperties": false,
+              "properties": {
+                "filename": {
+                  "type": "string"
+                },
+                "code": {
+                  "type": "string"
+                }
+              }
+            }
+          },
           "image": {
             "type": "string"
           },
@@ -74,7 +90,7 @@
           "type": "string"
         },
         "links": {
-          "required": [],
+          "required": ["title", "url"],
           "additionalProperties": false,
           "type": "object",
           "properties": {
@@ -83,6 +99,22 @@
             },
             "url": {
               "type": "string"
+            }
+          }
+        },
+        "files": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["filename", "code"],
+            "additionalProperties": false,
+            "properties": {
+              "filename": {
+                "type": "string"
+              },
+              "code": {
+                "type": "string"
+              }
             }
           }
         },
