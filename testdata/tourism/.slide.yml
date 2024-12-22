@@ -1,0 +1,33 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/enuesaa/dotslide/refs/heads/main/.slide.schema.json
+
+slides:
+  - cap: Eiffel Tower
+    title: The Icon of Paris
+    description: The Eiffel Tower stands as a symbol of romance and engineering brilliance. Visit for breathtaking views of Paris.
+    links:
+      - title: Learn more
+        url: https://example.com
+    image: architecture.svg
+
+  - cap: Louvre Museum
+    title: World's Largest Art Museum
+    description: The Louvre is home to the Mona Lisa and countless masterpieces. Explore centuries of art and history.
+
+  - cap: Mont Saint-Michel
+    title: A Fairytale Island
+    description: This medieval abbey rises dramatically from the sea. A must-visit for lovers of history and architecture.
+    image: architecture.svg
+
+  - description: And also
+    left: 
+      cap: French Riviera
+      title: Luxury and Sun-Kissed Beaches
+      description: The French Riviera offers glamorous resorts, turquoise waters, and endless sunshine. Perfect for relaxation.
+    right:
+      cap: Palace of Versailles
+      title: A Royal Masterpiece
+      description: Step into the grandeur of the French monarchy at the Palace of Versailles. Stroll through its magnificent gardens.
+      image: architecture.svg
+    metaLeft:
+      title: a
+    

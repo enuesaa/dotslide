@@ -2,6 +2,7 @@
 	import Unit from './Unit.svelte'
 	import SlideNextButton from './SlideNextButton.svelte'
 	import SlideFullScreenButton from './SlideFullScreenButton.svelte'
+	import SlideEnd from './SlideEnd.svelte'
 	import { page } from '$app/stores'
 
 	import { fetchSlides } from '$lib/api'
@@ -23,6 +24,10 @@
 		{/if}
 	{/each}
 
-	<SlideNextButton current={slideNumber} end={$slides.data.length - 1} />
+	{#if slideNumber >= $slides.data.length}
+		<SlideEnd />
+	{/if}
+
+	<SlideNextButton current={slideNumber} end={$slides.data.length} />
 	<SlideFullScreenButton />
 {/if}
