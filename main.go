@@ -10,31 +10,31 @@ import (
 )
 
 var (
-	port    = flag.IntP("port", "p", 3000, "Port")
-	workdir = flag.StringP("workdir", "w", ".", "Workdir")
-	capture = flag.Bool("capture", false, "Make Capture")
-	help    = flag.BoolP("help", "h", false, "Print help message")
-	version = flag.BoolP("version", "v", false, "Print app version")
+	portFlag    = flag.IntP("port", "p", 3000, "Port")
+	workdirFlag = flag.StringP("workdir", "w", ".", "Workdir")
+	captureFlag = flag.Bool("capture", false, "Make Capture")
+	helpFlag    = flag.BoolP("help", "h", false, "Print help message")
+	versionFlag = flag.BoolP("version", "v", false, "Print app version")
 )
 
 func main() {
 	flag.Parse()
 
-	if *help {
+	if *helpFlag {
 		fmt.Println("Usage of dotslide:")
 		flag.PrintDefaults()
 		os.Exit(0)
 	}
 
-	if *version {
+	if *versionFlag {
 		fmt.Println("dotslide v0.0.1")
 		os.Exit(0)
 	}
 
 	config := internal.Config{
-		Port:    *port,
-		Workdir: *workdir,
-		Capture: *capture,
+		Port:    *portFlag,
+		Workdir: *workdirFlag,
+		Capture: *captureFlag,
 	}
 	app := internal.New(config)
 
