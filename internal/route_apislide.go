@@ -16,7 +16,7 @@ func (r *Router) handleApiSlide(c echo.Context) error {
 	if err != nil {
 		return err
 	}
-	
+
 	var dotslide slides.DotSlide
 	if err := yaml.Unmarshal(data, &dotslide); err != nil {
 		return err

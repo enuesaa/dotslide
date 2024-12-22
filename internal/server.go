@@ -8,7 +8,7 @@ import (
 
 func NewServer(router Router) Server {
 	return Server{
-		Port: 3000,
+		Port:   3000,
 		router: router,
 	}
 }
@@ -22,7 +22,7 @@ type Server struct {
 
 func (s *Server) Serve() error {
 	s.server = &http.Server{
-		Addr: fmt.Sprintf(":%d", s.Port),
+		Addr:    fmt.Sprintf(":%d", s.Port),
 		Handler: s.router.Handle(),
 	}
 	fmt.Println("server started")

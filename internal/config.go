@@ -1,6 +1,7 @@
 package internal
 
 type Config struct {
-	Port int
+	Port    int
 	Workdir string
+	Capture bool
 }

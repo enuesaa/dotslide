@@ -9,7 +9,7 @@ import (
 	"github.com/labstack/echo/v4"
 )
 
-func (r *Router) handleStorage(c echo.Context) error  {
+func (r *Router) handleStorage(c echo.Context) error {
 	path := c.Request().URL.Path // like `/`
 	path = strings.TrimPrefix(path, "/storage/")
 	path = filepath.Join(r.config.Workdir, path)

@@ -8,16 +8,24 @@ import (
 )
 
 var (
-	port = flag.IntP("port", "p", 3000, "Port")
+	port    = flag.IntP("port", "p", 3000, "Port")
 	workdir = flag.StringP("workdir", "w", ".", "Workdir")
+	capture = flag.Bool("capture", false, "Make Capture")
 )
 
 func main() {
 	flag.Parse()
 
+	if *capture {
+		if err := internal.Capture(); err != nil {
+			log.Panicf("Error: %s", err.Error())
+		}
+	}
+
 	config := internal.Config{
-		Port: *port,
+		Port:    *port,
 		Workdir: *workdir,
+		Capture: *capture,
 	}
 	app := internal.New(config)
 

@@ -5,29 +5,29 @@ type DotSlide struct {
 }
 
 type Slide struct {
-	Cap         string    `json:"cap,omitempty" yaml:"cap"`
-	Title       string    `json:"title,omitempty" yaml:"title"`
-	Description string    `json:"description,omitempty" yaml:"description"`
+	Cap         string     `json:"cap,omitempty" yaml:"cap"`
+	Title       string     `json:"title,omitempty" yaml:"title"`
+	Description string     `json:"description,omitempty" yaml:"description"`
 	Links       []UnitLink `json:"links,omitempty" yaml:"links"`
 	Files       []UnitFile `json:"files,omitempty" yaml:"files"`
-	Terminal    string    `json:"terminal,omitempty" yaml:"terminal"`
-	Image       string    `json:"image,omitempty" yaml:"image"`
-	Left        *Unit     `json:"left,omitempty" yaml:"left"`
-	Center      *Unit     `json:"center,omitempty" yaml:"center"`
-	Right       *Unit     `json:"right,omitempty" yaml:"right"`
-	MetaLeft    *Unit     `json:"metaLeft,omitempty" yaml:"metaLeft"`
-	MetaCenter  *Unit     `json:"metaCenter,omitempty" yaml:"metaCenter"`
-	MetaRight   *Unit     `json:"metaRight,omitempty" yaml:"metaRight"`
+	Terminal    string     `json:"terminal,omitempty" yaml:"terminal"`
+	Image       string     `json:"image,omitempty" yaml:"image"`
+	Left        *Unit      `json:"left,omitempty" yaml:"left"`
+	Center      *Unit      `json:"center,omitempty" yaml:"center"`
+	Right       *Unit      `json:"right,omitempty" yaml:"right"`
+	MetaLeft    *Unit      `json:"metaLeft,omitempty" yaml:"metaLeft"`
+	MetaCenter  *Unit      `json:"metaCenter,omitempty" yaml:"metaCenter"`
+	MetaRight   *Unit      `json:"metaRight,omitempty" yaml:"metaRight"`
 }
 
 type Unit struct {
-	Cap         string `json:"cap,omitempty" yaml:"cap"`
-	Title       string `json:"title,omitempty" yaml:"title"`
-	Description string `json:"description,omitempty" yaml:"description"`
+	Cap         string     `json:"cap,omitempty" yaml:"cap"`
+	Title       string     `json:"title,omitempty" yaml:"title"`
+	Description string     `json:"description,omitempty" yaml:"description"`
 	Links       []UnitLink `json:"links,omitempty" yaml:"links"`
 	Files       []UnitFile `json:"files,omitempty" yaml:"files"`
-	Terminal    string `json:"terminal,omitempty" yaml:"terminal"`
-	Image       string `json:"image,omitempty" yaml:"image"`
+	Terminal    string     `json:"terminal,omitempty" yaml:"terminal"`
+	Image       string     `json:"image,omitempty" yaml:"image"`
 }
 
 type UnitLink struct {
