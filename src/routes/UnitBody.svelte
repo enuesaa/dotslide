@@ -3,8 +3,6 @@
 	import UnitDescription from './UnitDescription.svelte'
 	import UnitLinks from './UnitLinks.svelte'
 	import UnitImage from './UnitImage.svelte'
-	import UnitTerminal from './UnitTerminal.svelte'
-	import UnitSep from './UnitSep.svelte'
 	import UnitTitle from './UnitTitle.svelte'
 	import UnitCap from './UnitCap.svelte'
 

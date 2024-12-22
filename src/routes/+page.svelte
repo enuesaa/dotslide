@@ -1,9 +1,13 @@
 <script lang="ts">
 	import Unit from './Unit.svelte'
-	import ScrollButton from './ScrollButton.svelte'
+	import SlideNextButton from './SlideNextButton.svelte'
+	import { page } from '$app/stores'
 
 	import { fetchSlides } from '$lib/api'
 	import { createQuery } from '@tanstack/svelte-query'
+
+	let slideNumber = 0
+	$: slideNumber = Number($page.url.searchParams.get('slide'))
 
 	const slides = createQuery({
 		queryKey: ['slides'],
@@ -12,9 +16,11 @@
 </script>
 
 {#if $slides.isSuccess}
-	{#each $slides.data as unit}
-		<Unit {unit} />
+	{#each $slides.data as unit, i}
+		{#if i === slideNumber}
+			<Unit {unit} />
+		{/if}
 	{/each}
-{/if}
 
-<ScrollButton />
+	<SlideNextButton current={slideNumber} end={$slides.data.length - 1} />
+{/if}
