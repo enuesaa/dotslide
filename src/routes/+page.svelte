@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Unit from './Unit.svelte'
 	import SlideNextButton from './SlideNextButton.svelte'
+	import SlideFullScreenButton from './SlideFullScreenButton.svelte'
 	import { page } from '$app/stores'
 
 	import { fetchSlides } from '$lib/api'
@@ -23,4 +24,5 @@
 	{/each}
 
 	<SlideNextButton current={slideNumber} end={$slides.data.length - 1} />
+	<SlideFullScreenButton />
 {/if}
