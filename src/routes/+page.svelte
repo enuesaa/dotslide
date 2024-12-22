@@ -8,8 +8,10 @@
 	import { fetchSlides } from '$lib/api'
 	import { createQuery } from '@tanstack/svelte-query'
 
-	let slideNumber = 0
-	$: slideNumber = Number($page.url.searchParams.get('slide'))
+	let slideNumber = $state(0)
+	$effect.pre(() => {
+		slideNumber = Number($page.url.searchParams.get('slide'))
+	})
 
 	const slides = createQuery({
 		queryKey: ['slides'],

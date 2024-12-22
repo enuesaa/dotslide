@@ -1,14 +1,13 @@
 package internal
 
 import (
+	"time"
+
 	"github.com/playwright-community/playwright-go"
 )
 
 func Capture() error {
-	installops := playwright.RunOptions{
-		Browsers: []string{"chromium"},
-	}
-	if err := playwright.Install(&installops); err != nil {
+	if err := playwright.Install(); err != nil {
 		return err
 	}
 
@@ -31,15 +30,15 @@ func Capture() error {
 		return err
 	}
 
-	if _, err := page.Goto("https://example.com"); err != nil {
+	if _, err := page.Goto("http://localhost:3000/"); err != nil {
 		return err
 	}
 
-	pdfops := playwright.PagePdfOptions{
-		Path:   playwright.String("output.pdf"),
-		Format: playwright.String("A4"),
-	}
+	time.Sleep(5 * time.Second)
 
+	pdfops := playwright.PagePdfOptions{
+		Path: playwright.String("output.pdf"),
+	}
 	if _, err := page.PDF(pdfops); err != nil {
 		return err
 	}

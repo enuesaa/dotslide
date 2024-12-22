@@ -16,12 +16,6 @@ var (
 func main() {
 	flag.Parse()
 
-	if *capture {
-		if err := internal.Capture(); err != nil {
-			log.Panicf("Error: %s", err.Error())
-		}
-	}
-
 	config := internal.Config{
 		Port:    *port,
 		Workdir: *workdir,
