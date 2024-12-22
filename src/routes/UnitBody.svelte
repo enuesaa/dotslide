@@ -9,6 +9,7 @@
 	import { createTreeViewCtl, createViewing } from '$lib/tree'
 	import UnitSep from './UnitSep.svelte'
 	import UnitFiles from './UnitFiles.svelte'
+	import UnitTerminal from './UnitTerminal.svelte'
 
 	export let unit: Unit
 
@@ -39,12 +40,9 @@
 		<UnitFiles files={unit.files} />
 	{/if}
 
-	<!-- 
-	{#if unit.console !== undefined}
-		<UnitSep text="</>" />
-		<UnitTerminal content={unit.console} />
+	{#if unit?.terminal !== undefined}
+		<UnitTerminal content={unit.terminal} />
 	{/if}
-	-->
 </section>
 
 <style lang="postcss">

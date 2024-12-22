@@ -50,6 +50,9 @@
               }
             }
           },
+          "terminal": {
+            "type": "string"
+          },
           "image": {
             "type": "string"
           },
@@ -117,6 +120,9 @@
               }
             }
           }
+        },
+        "terminal": {
+          "type": "string"
         },
         "image": {
           "type": "string"

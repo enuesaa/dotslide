@@ -10,6 +10,7 @@ type Slide struct {
 	Description string `json:"description,omitempty"`
 	Links       []UnitLink `json:"links,omitempty"`
 	Files       []UnitFile `json:"files,omitempty"`
+	Terminal    string `json:"terminal,omitempty"`
 	Image       string `json:"image,omitempty"`
 	Left        *Unit  `json:"left,omitempty"`
 	Center      *Unit  `json:"center,omitempty"`
@@ -25,6 +26,7 @@ type Unit struct {
 	Description string `json:"description,omitempty"`
 	Links       []UnitLink `json:"links,omitempty"`
 	Files       []UnitFile `json:"files,omitempty"`
+	Terminal    string `json:"terminal,omitempty"`
 	Image       string `json:"image,omitempty"`
 }
 

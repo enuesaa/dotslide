@@ -35,3 +35,7 @@ slides:
           package main
 
           var Alt = ""
+  - cap: terminal
+    terminal: |
+      $ echo a
+      a

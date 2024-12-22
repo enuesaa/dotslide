@@ -2,11 +2,9 @@ export type Unit = {
   cap?: string
 	title?: string
 	description?: string
-	links?: {
-		title: string
-		url: string
-	}[]
+	links?: UnitLink[]
 	files?: UnitFile[]
+	terminal?: string
 	image?: string
 	console?: string
 	left?: Unit
@@ -15,6 +13,11 @@ export type Unit = {
 	metaLeft?: Unit
   metaCenter?: Unit
   metaRight?: Unit
+}
+
+export type UnitLink = {
+	title: string
+	url: string
 }
 
 export type UnitFile = {
