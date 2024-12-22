@@ -3,14 +3,10 @@ import { writable, type Writable } from 'svelte/store'
 import { setContext, getContext } from 'svelte'
 import type { UnitFile } from './types'
 
-// export type TreeData = {
-// 	id: string
-// 	title: string
-// 	isDir: boolean
-// 	children: TreeData[]
-// 	code: string
-// 	language: string
-// }
+export type TreeFile = UnitFile & {
+	title: string
+	isDir: boolean
+}
 
 export const createTreeViewCtl = () => {
 	setContext(

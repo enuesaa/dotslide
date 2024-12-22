@@ -21,9 +21,17 @@ slides:
 
   - cap: つづき
     files:
-      - filename: main.go
+      - filename: aa/main.go
         code: |
           package main
 
           func main() {
           }
+      - filename: bb.txt
+        code: |
+          hello
+      - filename: aa/alt.go
+        code: |
+          package main
+
+          var Alt = ""

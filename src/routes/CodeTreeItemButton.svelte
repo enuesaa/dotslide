@@ -1,18 +1,15 @@
 <script lang="ts">
 	import { melt } from '@melt-ui/svelte'
-	import { getTreeViewCtl, getViewing } from '$lib/tree'
-	import { type UnitFile } from '$lib/types'
+	import { getTreeViewCtl, getViewing, type TreeFile } from '$lib/tree'
 
-	export let data: UnitFile
-	// const hasChildren = data.children.length > 0
-
+	export let data: TreeFile
 	const { item } = getTreeViewCtl()
 	const viewing = getViewing()
 
 	function hanldeClick() {
-		// if (hasChildren) {
-		// 	return
-		// }
+		if (data.isDir) {
+			return
+		}
 		viewing.set(data)
 	}
 </script>
@@ -20,13 +17,13 @@
 <button
 	use:melt={$item({
 		id: data.filename,
-		// hasChildren,
+		hasChildren: data.isDir,
 	})}
 	on:click|preventDefault={hanldeClick}
-	disabled={false}
+	disabled={data.isDir === true}
 	class={$viewing?.filename === data.filename ? 'bg-editorsep/50 border-editortext/50 border-[0.5px]' : ''}
 >
-	{data.filename}
+	{data.title}
 </button>
 
 <style lang="postcss">
