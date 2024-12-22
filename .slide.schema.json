@@ -20,35 +20,10 @@
             "type": "string"
           },
           "links": {
-            "required": [
-              "title", "url"
-            ],
-            "additionalProperties": false,
-            "type": "object",
-            "properties": {
-              "title": {
-                "type": "string"
-              },
-              "url": {
-                "type": "string"
-              }
-            }
+            "$ref": "#/definitions/links"
           },
           "files": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": ["filename", "code"],
-              "additionalProperties": false,
-              "properties": {
-                "filename": {
-                  "type": "string"
-                },
-                "code": {
-                  "type": "string"
-                }
-              }
-            }
+            "$ref": "#/definitions/files"
           },
           "terminal": {
             "type": "string"
@@ -66,7 +41,7 @@
             "$ref": "#/definitions/unit"
           },
           "metaLeft": {
-            "$ref": "#/definitions/unit" 
+            "$ref": "#/definitions/unit"
           },
           "metaCenter": {
             "$ref": "#/definitions/unit"
@@ -93,39 +68,48 @@
           "type": "string"
         },
         "links": {
-          "required": ["title", "url"],
-          "additionalProperties": false,
-          "type": "object",
-          "properties": {
-            "title": {
-              "type": "string"
-            },
-            "url": {
-              "type": "string"
-            }
-          }
+          "$ref": "#/definitions/links"
         },
         "files": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "required": ["filename", "code"],
-            "additionalProperties": false,
-            "properties": {
-              "filename": {
-                "type": "string"
-              },
-              "code": {
-                "type": "string"
-              }
-            }
-          }
+          "$ref": "#/definitions/files"
         },
         "terminal": {
           "type": "string"
         },
         "image": {
           "type": "string"
+        }
+      }
+    },
+    "links": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["title", "url"],
+        "additionalProperties": false,
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["filename", "code"],
+        "additionalProperties": false,
+        "properties": {
+          "filename": {
+            "type": "string"
+          },
+          "code": {
+            "type": "string"
+          }
         }
       }
     }
