@@ -2,16 +2,18 @@ package internal
 
 import "time"
 
-func NewApp(config Config, server Server) App {
+func NewApp(config Config, server Server, capturectl CaptureCtl) App {
 	return App{
 		config: config,
 		server: server,
+		capturectl: capturectl,
 	}
 }
 
 type App struct {
 	config Config
 	server Server
+	capturectl CaptureCtl
 }
 
 func (a *App) Run() error {
@@ -35,9 +37,11 @@ func (a *App) runServe() error {
 func (a *App) runCapture() error {
 	go a.runServe()
 
-	time.Sleep(5 * time.Second)
+	time.Sleep(2 * time.Second)
 
-	Capture()
+	if err := a.capturectl.Capture(); err != nil {
+		return err
+	}
 
 	return a.server.Close()
 }

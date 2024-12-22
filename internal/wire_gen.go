@@ -11,6 +11,7 @@ package internal
 func New(config Config) App {
 	router := NewRouter(config)
 	server := NewServer(router)
-	app := NewApp(config, server)
+	captureCtl := NewCaptureCtl(config)
+	app := NewApp(config, server, captureCtl)
 	return app
 }
