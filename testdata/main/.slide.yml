@@ -1,25 +1,30 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/enuesaa/dotslide/refs/heads/main/.slide.schema.json
 
 slides:
-  - cap: テストデータ
-
-  - title: slide title
-    description: desc
+  - cap: テストスライド
+    description: testdata of dotslide
     image: architecture.svg
+    links:
+      - title: enuesaa/dotslide
+        url: https://github.com/enuesaa/dotslide
+
+  - cap: slide title
+    title: section title
+    description: description
     left:
-      title: left
+      title: left section title
       description: |
-        left desc
-    right:
-      title: right
-      description: |
-        right desc
+        left section description
       image: architecture.svg
+    right:
+      title: right section title
+      description: |
+        right section description
       links:
-        - title: ドキュメント
+        - title: example.com
           url: https://example.com/
 
-  - cap: つづき
+  - cap: コードブロック
     files:
       - filename: aa/main.go
         code: |
@@ -27,15 +32,15 @@ slides:
 
           func main() {
           }
-      - filename: bb.txt
+      - filename: README.md
         code: |
-          hello
+          # hello
       - filename: aa/alt.go
         code: |
           package main
 
           var Alt = ""
-  - cap: terminal
+  - cap: ターミナル
     terminal: |
       $ echo a
       a

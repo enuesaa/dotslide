@@ -1,6 +1,8 @@
 # dotslide
 My personal presentation tool. very personal
 
+[![ci](https://github.com/enuesaa/dotslide/actions/workflows/ci.yml/badge.svg)](https://github.com/enuesaa/dotslide/actions/workflows/ci.yml)
+
 ## Usage
 ### 1. Create `.slide.yml`
 Please look up `./testdata` and create `.slide.yml`
