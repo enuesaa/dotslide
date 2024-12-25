@@ -101,7 +101,7 @@ func (c *CaptureCtl) captureSlide(slideNumber int) error {
 	}
 	page, err := c.browser.NewPage(playwright.BrowserNewPageOptions{
 		Viewport: &playwright.Size{
-			Width: 1280,
+			Width: 1500,
 			Height: 720,
 		},
 	})
@@ -118,7 +118,7 @@ func (c *CaptureCtl) captureSlide(slideNumber int) error {
 
 	pdfops := playwright.PagePdfOptions{
 		Path: playwright.String(c.fmtCaptureOutput(slideNumber)),
-		Width: playwright.String("1280"),
+		Width: playwright.String("1500"),
 		Height: playwright.String("800"),
 		Outline: playwright.Bool(true),
 		PageRanges: playwright.String("1"),
