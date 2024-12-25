@@ -25,7 +25,7 @@ func (s *Server) Serve() error {
 		Addr:    fmt.Sprintf(":%d", s.Port),
 		Handler: s.router.Handle(),
 	}
-	fmt.Println("server started")
+	fmt.Printf("server started on http://localhost:%d/\n", s.Port)
 
 	return s.server.ListenAndServe()
 }
