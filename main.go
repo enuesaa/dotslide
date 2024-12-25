@@ -4,10 +4,14 @@ import (
 	"fmt"
 	"log"
 	"os"
+	_ "embed"
 
 	"github.com/enuesaa/dotslide/internal"
 	flag "github.com/spf13/pflag"
 )
+
+//go:embed .slide.sample.yml
+var sampleSlideYml string
 
 var (
 	portFlag    = flag.IntP("port", "p", 3000, "Port")
@@ -15,6 +19,7 @@ var (
 	captureFlag = flag.Bool("capture", false, "Make Capture")
 	helpFlag    = flag.BoolP("help", "h", false, "Print help message")
 	versionFlag = flag.BoolP("version", "v", false, "Print app version")
+	sampleFlag  = flag.Bool("sample", false, "Print sample .slide.yml")
 )
 
 func main() {
@@ -28,6 +33,11 @@ func main() {
 
 	if *versionFlag {
 		fmt.Println("dotslide v0.0.1")
+		os.Exit(0)
+	}
+
+	if *sampleFlag {
+		fmt.Println(sampleSlideYml)
 		os.Exit(0)
 	}
 

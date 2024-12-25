@@ -16,6 +16,7 @@ Usage of dotslide:
       --capture          Make Capture
   -h, --help             Print help message
   -p, --port int         Port (default 3000)
+      --sample           Print sample .slide.yml
   -v, --version          Print app version
   -w, --workdir string   Workdir (default ".")
 ```
