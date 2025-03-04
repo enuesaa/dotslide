@@ -73,5 +73,8 @@
 			</div>
 		</section>
 	{/if}
+	{#if unit.footer !== undefined}
+		<UnitBody unit={unit.footer} />
+	{/if}
 </div>
 

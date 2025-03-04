@@ -27,6 +27,11 @@ slides:
       links:
         - title: example.com
           url: https://example.com/
+    footer:
+      title: this is footer
+      description: |
+        footer can include very long long text in slide bottom. and...... and.... continue... still continue... and break line.
+        hello
 
   - cap: コードブロック
     files:

@@ -1,5 +1,5 @@
 export type Unit = {
-	cover: string
+	cover?: string
   cap?: string
 	title?: string
 	description?: string
@@ -14,6 +14,7 @@ export type Unit = {
 	metaLeft?: Unit
   metaCenter?: Unit
   metaRight?: Unit
+	footer?: Unit
 }
 
 export type UnitLink = {

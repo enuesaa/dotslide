@@ -19,6 +19,7 @@ type Slide struct {
 	MetaLeft    *Unit      `json:"metaLeft,omitempty" yaml:"metaLeft"`
 	MetaCenter  *Unit      `json:"metaCenter,omitempty" yaml:"metaCenter"`
 	MetaRight   *Unit      `json:"metaRight,omitempty" yaml:"metaRight"`
+	Footer      *Unit      `json:"footer,omitempty" yaml:"footer"`
 }
 
 type Unit struct {

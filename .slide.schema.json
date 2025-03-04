@@ -51,6 +51,9 @@
           },
           "metaRight": {
             "$ref": "#/definitions/unit"
+          },
+          "footer": {
+            "$ref": "#/definitions/unit"
           }
         }
       }
