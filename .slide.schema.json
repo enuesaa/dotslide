@@ -10,6 +10,9 @@
         "type": "object",
         "additionalProperties": false,
         "properties": {
+          "cover": {
+            "type": "string"
+          },
           "cap": {
             "type": "string"
           },

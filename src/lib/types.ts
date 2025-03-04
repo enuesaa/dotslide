@@ -1,4 +1,5 @@
 export type Unit = {
+	cover: string
   cap?: string
 	title?: string
 	description?: string

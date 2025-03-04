@@ -5,6 +5,7 @@ type DotSlide struct {
 }
 
 type Slide struct {
+	Cover       string     `json:"cover,omitempty" yaml:"cover"`
 	Cap         string     `json:"cap,omitempty" yaml:"cap"`
 	Title       string     `json:"title,omitempty" yaml:"title"`
 	Description string     `json:"description,omitempty" yaml:"description"`

@@ -1,6 +1,10 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/enuesaa/dotslide/refs/heads/main/.slide.schema.json
 
 slides:
+  - cover: |
+      テスト
+      テストテスト
+
   - cap: テストスライド
     description: testdata of dotslide
     image: architecture.svg

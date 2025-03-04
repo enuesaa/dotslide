@@ -4,10 +4,9 @@
 	import UnitLinks from './UnitLinks.svelte'
 	import UnitImage from './UnitImage.svelte'
 	import UnitTitle from './UnitTitle.svelte'
+	import UnitCover from './UnitCover.svelte'
 	import UnitCap from './UnitCap.svelte'
-	import CodeViewer from './CodeViewer.svelte'
 	import { createTreeViewCtl, createViewing } from '$lib/tree'
-	import UnitSep from './UnitSep.svelte'
 	import UnitFiles from './UnitFiles.svelte'
 	import UnitTerminal from './UnitTerminal.svelte'
 
@@ -18,6 +17,9 @@
 </script>
 
 <section>
+	{#if unit?.cover !== undefined}
+		<UnitCover {unit} />
+	{/if}
 	{#if unit?.cap !== undefined}
 		<UnitCap {unit} />
 	{/if}
