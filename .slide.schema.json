@@ -44,6 +44,9 @@
           "right": {
             "$ref": "#/definitions/unit"
           },
+          "meta": {
+            "$ref": "#/definitions/unit"
+          },
           "metaLeft": {
             "$ref": "#/definitions/unit"
           },

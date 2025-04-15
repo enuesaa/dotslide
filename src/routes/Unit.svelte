@@ -40,7 +40,9 @@
 			</div>
 		</section>
 	{/if}
-
+	{#if unit.meta !== undefined}
+		<UnitBody unit={unit.meta} />
+	{/if}
 	{#if unit.metaCenter !== undefined}
 		<section class="flex gap-10">
 			<div class="w-1/3">

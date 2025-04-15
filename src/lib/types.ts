@@ -11,6 +11,7 @@ export type Unit = {
 	left?: Unit
   center?: Unit
 	right?: Unit
+	meta?: Unit
 	metaLeft?: Unit
   metaCenter?: Unit
   metaRight?: Unit
