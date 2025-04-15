@@ -38,6 +38,7 @@
             "$ref": "#/definitions/unit"
           },
           "center": {
+            "deprecated": true,
             "$ref": "#/definitions/unit"
           },
           "right": {
@@ -47,6 +48,7 @@
             "$ref": "#/definitions/unit"
           },
           "metaCenter": {
+            "deprecated": true,
             "$ref": "#/definitions/unit"
           },
           "metaRight": {
