@@ -16,6 +16,7 @@ type Slide struct {
 	Left        *Unit      `json:"left,omitempty" yaml:"left"`
 	Center      *Unit      `json:"center,omitempty" yaml:"center"`
 	Right       *Unit      `json:"right,omitempty" yaml:"right"`
+	Meta        *Unit      `json:"meta,omitempty" yaml:"meta"`
 	MetaLeft    *Unit      `json:"metaLeft,omitempty" yaml:"metaLeft"`
 	MetaCenter  *Unit      `json:"metaCenter,omitempty" yaml:"metaCenter"`
 	MetaRight   *Unit      `json:"metaRight,omitempty" yaml:"metaRight"`
