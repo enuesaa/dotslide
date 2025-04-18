@@ -32,7 +32,7 @@ func main() {
 	}
 
 	if *versionFlag {
-		fmt.Println("dotslide v0.0.4")
+		fmt.Println("dotslide v0.0.5")
 		os.Exit(0)
 	}
 
