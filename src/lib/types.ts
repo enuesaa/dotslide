@@ -9,11 +9,9 @@ export type Unit = {
 	image?: string
 	console?: string
 	left?: Unit
-  center?: Unit
 	right?: Unit
 	meta?: Unit
 	metaLeft?: Unit
-  metaCenter?: Unit
   metaRight?: Unit
 	footer?: Unit
 }
