@@ -10,6 +10,6 @@
 
 <style lang="postcss">
 	div {
-		line-height: 1.3;
+		line-height: 1.5;
 	}
 </style>
