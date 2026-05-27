@@ -15,3 +15,5 @@ internal/ui/dist/*
 # slide
 data
 *.pdf
+*.mov
+*.mp4
