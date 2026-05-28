@@ -7,7 +7,7 @@ slides:
 
   - cap: テストスライド
     description: testdata of dotslide
-    image: architecture.svg
+    image: size=(large) architecture.svg
     links:
       - title: enuesaa/dotslide
         url: https://github.com/enuesaa/dotslide
@@ -56,3 +56,6 @@ slides:
     terminal: |
       $ echo a
       a
+
+  - cap: 動画
+    image: size=(large) sample.mp4
