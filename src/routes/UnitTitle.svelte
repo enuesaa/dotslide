@@ -6,7 +6,7 @@
 
 </script>
 
-<div class="font-semibold text-4xl mt-5 mb-3 pl-2 font-zenmaru flex gap-[3px] text-left">
+<div class="font-semibold text-5xl mt-5 mb-3 pl-2 font-zenmaru flex gap-[3px] text-left">
 	<span class="text-3xl mr-1 w-7">
 		<SquareChevronDown class="inline align-middle" />
 	</span>

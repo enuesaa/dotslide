@@ -11,7 +11,7 @@
 
 <style lang="postcss">
 	section {
-		@apply mt-1 mb-2 px-2 font-zenmaru text-4xl w-full;
+		@apply mt-1 mb-2 px-2 font-zenmaru text-5xl w-full;
 	}
 	p {
 		letter-spacing: 0.1px;
@@ -23,5 +23,8 @@
 		font-feature-settings: 'palt';
 		@apply font-medium font-zenmaru text-blackgray/80;
 		margin-bottom: 0.6em;
+	}
+	p:last-child {
+		margin-bottom: 0;
 	}
 </style>
