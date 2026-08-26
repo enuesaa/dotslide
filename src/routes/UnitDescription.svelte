@@ -11,7 +11,7 @@
 
 <style lang="postcss">
 	section {
-		@apply mt-1 mb-2 px-2 font-zenmaru text-5xl w-full;
+		@apply mt-1 mb-2 px-2 font-zenmaru text-4xl w-full;
 	}
 	p {
 		letter-spacing: 0.1px;
