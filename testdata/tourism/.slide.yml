@@ -13,7 +13,9 @@ slides:
     title: World's Largest Art Museum
     description: The Louvre is home to the Mona Lisa and countless masterpieces. Explore centuries of art and history.
 
-  - cap: Mont Saint-Michel
+  - cap: |
+      symbol=( ) Mont
+        Saint-Michel
     title: A Fairytale Island
     description: |
       This medieval abbey rises dramatically from the sea.
