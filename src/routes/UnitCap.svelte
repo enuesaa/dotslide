@@ -8,6 +8,6 @@
 	$: symbol = attrs?.symbol ?? '#'
 </script>
 
-<div class="font-semibold mt-5 mb-3 font-zenmaru text-7xl text-left pl-2 block w-full whitespace-pre-wrap">
+<div class="font-semibold mt-5 mb-3 font-zenmaru text-6xl text-left pl-2 block w-full whitespace-pre-wrap">
 	{symbol} {cap}
 </div>
