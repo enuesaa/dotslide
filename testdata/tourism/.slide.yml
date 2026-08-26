@@ -15,7 +15,10 @@ slides:
 
   - cap: Mont Saint-Michel
     title: A Fairytale Island
-    description: This medieval abbey rises dramatically from the sea. A must-visit for lovers of history and architecture.
+    description: |
+      This medieval abbey rises dramatically from the sea.
+
+      A must-visit for lovers of history and architecture.
     image: architecture.svg
 
   - description: And also
